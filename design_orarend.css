@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@2,400,600&display=swap');
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#mainDiv{
+    width: 90%;
+    height: 20%;
+    margin: 0 auto;
+    perspective: 4300px;
+}
+
+#boxDiv{
+    width: 100%;
+    transform-style: preserve-3d;
+    animation: rotate 45s linear infinite;
+}	
+
+#boxDiv div{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    opacity: 0.8;
+    color: white;
+    text-align: center;
+}	
+
+#front{ 
+    transform: translateZ(200px);
+    background: blue;
+}
+
+#back{
+    transform: rotateY(180deg) translateZ(200px);
+    background: red;
+}
+#left{
+    transform: rotateY(90deg) translate(-100px, 200px);
+    transform-origin: left;
+    width: 200px !important;
+    height: 201px !important;
+}
+#right{
+    transform: rotateY(90deg) translate(700px, 200px);
+    transform-origin: right;
+    background-color: blue;
+}
+#top{
+    transform: rotateX(-90deg) translateY(-200px);
+    transform-origin: top;
+    background: black;
+}
+#bottom{
+    transform: rotateX(90deg) translateY(200px);
+    transform-origin: bottom;
+    background: #101010;
+}
+@keyframes rotate{
+    0%{ transform: rotateY(0); }
+    100%{ transform: rotateY(360deg); }
+}
+
+table {
+    width: 90%;
+    margin: auto;
+}
+
+caption {
+    font-size: 2.5em;
+    background-color: #d9d9d9;
+    border: 3px solid darkblue;
+    color: blue;
+    border-radius: 15px;
+    width: 60%;
+    margin: 0.5cm auto 1em;
+}
+
+thead {
+    background-color: orange;
+    color: darkblue;
+    font-weight: bold;
+}
+
+tbody {
+    background-color: #d9d9d9;
+    color: darkcyan;
+    font-weight: bold;
+ 
+}
+
+tfoot {
+    background-color: orange;
+    color: darkblue;
+    font-weight: bold;
+}
+
+th {
+    font-weight: bolder;
+    width: 11%;
+    height: 1.6em;
+    border: 2px solid brown;
+    border-radius: 10px;
+}
+
+td {
+    height: 1cm;
+    text-align: center;
+    font-style: italic;
+    border: 1px solid #000;
+}
+
+img{
+    width: 200px;
+    height: 201px;
+}
+
+img.img1{
+    transform: scaleX(-1);
+}
+
+i.fas{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+td:hover, th:hover{
+    background-color: rgba(0,0,0,.1);
+}
+
+tbody td:hover{
+    animation: heartBeat;
+    animation-duration: 1s;
+}
